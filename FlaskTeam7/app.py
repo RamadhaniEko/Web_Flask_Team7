@@ -3,23 +3,22 @@ from werkzeug.exceptions import abort
 
 # import mysql connector
 import mysql.connector
-'''
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your secret key'
-'''
+
 # Ubah get connection method untuk return db kita
-'''
+
 def get_db_connection():
     mydb = mysql.connector.connect(
         host="localhost",
         user="root",
         password="",
-        database="db_flaskcecep"
+        database="db_flaskkelompok7"
     )
 
     return mydb
-'''
-'''
+
 def get_post(post_id):
     # Ubah disini
     mydb = get_db_connection()
@@ -31,7 +30,7 @@ def get_post(post_id):
         'SELECT * FROM posts WHERE id = %s',
         (post_id,)
     )
-'''
+
     # Karena cuma ambil satu post sesuai id maka fetchone() dipanggil
     result = cursor.fetchone()
 
