@@ -14,7 +14,7 @@ def get_db_connection():
         host="localhost",
         user="root",
         password="",
-        database="db_flaskkelompok7"
+        database="db_flask_kelompok7"
     )
 
     return mydb
